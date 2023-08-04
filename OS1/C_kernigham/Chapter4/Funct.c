@@ -1,6 +1,8 @@
 //
 // Created by antouan on 31/7/2023.
 //
+#include <stdio.h>
+#include "Funct.h"
 
 int getlength(char Word[]){
     int i;

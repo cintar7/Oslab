@@ -1,5 +1,16 @@
-cc = gcc
+#this is a make file
+#SET THE COMPILER
+CC = gcc
+#SET THE FLAGS
+CFLAGS = -g -Wall
+#SET THE TARGET
+TARGET = Grep
+#MAKE
+all: $(TARGET)
 
-Grep: Grep.c
+$(TARGET): $(TARGET).c
+	$(CC) $(CFLAGS) -o $(TARGET) $(TARGET).c
 
-	cc Grep.c Funct.h Funct.C -o Grep
+clean:
+
+	$(RM) $(TARGET)
