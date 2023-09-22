@@ -18,7 +18,7 @@ int main(){
     int len = 0;
     int wordlen = 0;
     int comp = 0;
-
+    int count = 0; 
     printf("Please give the input word: ");
     scanf("%s",word);
     printf("So we are looking for <%s>'\n",word);
@@ -26,10 +26,10 @@ int main(){
     while((len= getlines(Line,Maxline)) > 1){
         comp = Compare(Line,word,wordlen,len);
         if (comp==1) {
-            puts(Line);
+            count++;
         }
     }
-
+    printf("The word \" %s \" was found : %d times\n",word,count);
     return 0;
 
 }
